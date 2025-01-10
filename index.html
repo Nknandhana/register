@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Form</title>
+    <title>Login Form</title>
     <style>
+
         .container {
             margin: auto;
             width: 500px;
             max-width: 90%;
             font-family: Arial, sans-serif;
         }
+
+    
         .container h1 {
             text-align: center;
         }
         .container label {
             font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
         }
-        .container input {
+
+        .container input, .container select {
             width: 100%;
             padding: 10px;
             margin: 5px 0 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box; 
         }
         .container input[type="submit"] {
             background-color: #007BFF;
@@ -30,18 +37,23 @@
             border: none;
             cursor: pointer;
         }
+
         .container input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+    
         .container .psw, .container .register {
             display: block;
             text-align: center;
             margin-top: 10px;
         }
+
         .container .psw a, .container .register a {
             color: #007BFF;
             text-decoration: none;
         }
+
         .container .psw a:hover, .container .register a:hover {
             text-decoration: underline;
         }
@@ -56,47 +68,36 @@
             
             <label for="psw">Password</label>
             <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
-            <div>
 
-            <label for="Acedemic year">Acedemic year</label>
-                <select name="Acedemic year" id="Acedemic year">
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="others">others</option>
-                  </select>
-                  <br><br>
-</div>
+            <label for="academic_year">Academic Year</label>
+            <select name="academic_year" id="academic_year" required>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
 
-<div>
             <label for="semester">Semester</label>
-            <select name="semester" id="semester">
-                <option value="s1">s1</option>
-                <option value="s2">s2</option>
-                <option value="s3">s3</option>
-                <option value="s4">s4</option>
-              </select>
-              <br><br>
-</div>
-            <div>
+            <select name="semester" id="semester" required>
+                <option value="s1">S1</option>
+                <option value="s2">S2</option>
+                <option value="s3">S3</option>
+                <option value="s4">S4</option>
+            </select>
+
             <label for="role">Role</label>
-            <select name="role" id="role">
+            <select name="role" id="role" required>
                 <option value="Faculty">Faculty</option>
-                <option value="students">Student</option>
+                <option value="Student">Student</option>
                 <option value="HOD">HOD</option>
-              </select>
-              <br><br>
-</div>
-            <input type="submit" value="Login" name="Login"> 
-            <script src="script.js"></script>
-            
+            </select>
+
+            <input type="submit" value="Login" name="Login">
+
             <div class="psw">Forgot <a href="#">password?</a></div>
             <p>Not registered? <a href="register.html">Create an account</a></p>
-    </div>
-
-    
-</div>
-
         </form>
     </div>
 </body>
